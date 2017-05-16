@@ -39,3 +39,5 @@ kubefed init federation \
 `kubefed join eastus --host-cluster-context=eastus`
 
 `kubefed join westus --host-cluster-context=eastus`
+
+`kubectl create -f https://github.com/kelseyhightower/kubernetes-cluster-federation/blob/master/rs/nginx.yaml`
