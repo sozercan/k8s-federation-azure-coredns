@@ -5,6 +5,7 @@ Kubernetes cluster federation on Azure with CoreDNS
 
 `helm upgrade --namespace my-namespace --set cluster.enabled=true etcd-operator stable/etcd-operator`
 
+values.yaml
 ```
 isClusterService: false
 serviceType: "LoadBalancer"
@@ -15,12 +16,12 @@ middleware:
     enabled: true
     zones:
     - "example.com."
-    endpoint: "http://etcd-cluster.my-namespace:2379"
+    endpoint: "http://etcd-cluster.etcd-operator:2379"
 ```
 
-`helm install --namespace my-namespace --name coredns -f Values.yaml stable/coredns`
+`helm install --namespace etcd-operator --name coredns -f Values.yaml stable/coredns`
 
-
+coredns-provider.conf
 ```
 [Global]
 etcd-endpoints = http://etcd-cluster.etcd-operator:2379
