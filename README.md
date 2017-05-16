@@ -2,6 +2,7 @@
 Kubernetes cluster federation on Azure with CoreDNS
 
 `helm install --namespace my-namespace --name etcd-operator stable/etcd-operator`
+
 `helm upgrade --namespace my-namespace --set cluster.enabled=true etcd-operator stable/etcd-operator`
 
 ```
@@ -36,4 +37,5 @@ kubefed init federation \
 `kubectl config use-context federation`
 
 `kubefed join eastus --host-cluster-context=eastus`
+
 `kubefed join westus --host-cluster-context=eastus`
