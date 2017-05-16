@@ -1,6 +1,11 @@
 # k8s-federation-azure
 Kubernetes cluster federation on Azure with CoreDNS
 
+## Prerequisites
+Kubernetes 1.6+ with Beta APIs enabled
+
+## Deploying CoreDNS and etcd charts
+
 `helm install --namespace my-namespace --name etcd-operator stable/etcd-operator`
 
 `helm upgrade --namespace my-namespace --set cluster.enabled=true etcd-operator stable/etcd-operator`
@@ -36,6 +41,8 @@ kubefed init federation \
     --dns-provider=coredns \
     --dns-provider-config=coredns-provider.conf
 ```   
+
+## Joining clusters to federation
 
 `kubectl config use-context federation`
 
