@@ -21,6 +21,8 @@ middleware:
 
 `helm install --namespace etcd-operator --name coredns -f Values.yaml stable/coredns`
 
+## Provision federated control plane
+
 coredns-provider.conf
 ```
 [Global]
@@ -41,10 +43,12 @@ kubefed init federation \
 
 `kubefed join westus --host-cluster-context=eastus`
 
-Create federated replicaset:
+## Create federated replicaset
+
 `kubectl create -f https://github.com/kelseyhightower/kubernetes-cluster-federation/blob/master/rs/nginx.yaml`
 
-Create federated service:
+## Create federated service
+
 `kubectl create -f https://github.com/kelseyhightower/kubernetes-cluster-federation/blob/master/services/nginx.yaml`
 
-Add Azure DNS Zone
+## Add Azure DNS Zone
