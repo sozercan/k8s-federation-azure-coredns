@@ -41,8 +41,10 @@ kubefed init federation \
 
 `kubefed join westus --host-cluster-context=eastus`
 
+Create federated replicaset:
 `kubectl create -f https://github.com/kelseyhightower/kubernetes-cluster-federation/blob/master/rs/nginx.yaml`
 
+Create federated service:
 `kubectl create -f https://github.com/kelseyhightower/kubernetes-cluster-federation/blob/master/services/nginx.yaml`
 
 Add Azure DNS Zone
