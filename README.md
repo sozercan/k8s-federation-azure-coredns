@@ -6,9 +6,9 @@ Kubernetes 1.6+ with Beta APIs enabled
 
 ## Deploying CoreDNS and etcd charts
 
-`helm install --namespace my-namespace --name etcd-operator stable/etcd-operator`
+`helm install --namespace etcd-operator --name etcd-operator stable/etcd-operator`
 
-`helm upgrade --namespace my-namespace --set cluster.enabled=true etcd-operator stable/etcd-operator`
+`helm upgrade --namespace etcd-operator --set cluster.enabled=true etcd-operator stable/etcd-operator`
 
 values.yaml
 ```
