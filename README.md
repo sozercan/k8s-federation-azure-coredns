@@ -7,10 +7,9 @@ Kubernetes 1.6+ with Beta APIs enabled
 ## Deploying CoreDNS and etcd charts
 
 `helm install --namespace etcd-operator --name etcd-operator stable/etcd-operator`
-
 `helm upgrade --namespace etcd-operator --set cluster.enabled=true etcd-operator stable/etcd-operator`
 
-values.yaml
+Add a file called `values.yaml` with the following contents
 ```
 isClusterService: false
 serviceType: "LoadBalancer"
@@ -24,11 +23,12 @@ middleware:
     endpoint: "http://etcd-cluster.etcd-operator:2379"
 ```
 
-`helm install --namespace etcd-operator --name coredns -f Values.yaml stable/coredns`
+`helm install --namespace etcd-operator --name coredns -f values.yaml stable/coredns`
 
 ## Provision federated control plane
 
-coredns-provider.conf
+Add a file called `coredns-provider.conf` with the following contents
+
 ```
 [Global]
 etcd-endpoints = http://etcd-cluster.etcd-operator:2379
