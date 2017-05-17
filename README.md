@@ -58,4 +58,8 @@ kubefed init federation \
 
 `kubectl create -f https://github.com/kelseyhightower/kubernetes-cluster-federation/blob/master/services/nginx.yaml`
 
-## Add Azure DNS Zone
+## Add DNS records in your provider
+<img src="azuredns.png" width="500">
+
+## Navigate to your A record
+<img src="nginx.png" width="500">
