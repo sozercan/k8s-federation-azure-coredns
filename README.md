@@ -19,7 +19,7 @@ middleware:
   etcd:
     enabled: true
     zones:
-    - "example.com."
+    - "azure.sertac.club."
     endpoint: "http://etcd-cluster.etcd-operator:2379"
 ```
 
