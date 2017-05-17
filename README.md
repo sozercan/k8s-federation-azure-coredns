@@ -1,5 +1,4 @@
-# k8s-federation-azure
-Kubernetes cluster federation on Azure with CoreDNS
+This guide is walkthrough for creating Kubernetes cluster federation on Microsoft Azure using CoreDNS
 
 ## Prerequisites
 Kubernetes 1.6+ with Beta APIs enabled
