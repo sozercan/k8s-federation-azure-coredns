@@ -1,7 +1,7 @@
 This guide is a walkthrough for creating Kubernetes cluster federation on Microsoft Azure using CoreDNS
 
 ## Prerequisites
-Kubernetes 1.6+ with Beta APIs enabled
+Kubernetes 1.6+ with Beta APIs and RBAC enabled
 
 ## Deploying CoreDNS and etcd charts
 
